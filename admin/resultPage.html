@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+	<meta charset="utf8">
+	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/Tuhoc/css/login.css">
+	<link rel="stylesheet" type="text/css" href="/Tuhoc/css/navbar.css">
+	<link rel="stylesheet" type="text/css" href="/Tuhoc/css/resutlpage.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/Tuhoc/js/search.js"></script>
+	<script type="text/javascript" src="/Tuhoc/js/main.js"></script>
+	<script type="text/javascript" src="/Tuhoc/js/searchResult.js"></script>
+	<script type="text/javascript" src="/Tuhoc/js/session.js"></script>
+	<script type="text/javascript" src="/Tuhoc/js/logout.js"></script>
+	<script>
+
+			if(checkSession() === false){
+				alert("Permission denied! \n Please Login");
+				window.location.href="/Tuhoc/login.html";
+			}
+
+	</script>
+</head>
+
+<body>
+	<header>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        				<span class="icon-bar"></span>
+       					<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+      				</button>
+      				<a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav" >
+						<li><a href="/Tuhoc/admin">Home</a></li>
+						<li><a href="/Tuhoc/admin">Search</a></li>
+						<li><a href="add.html">Add</a></li>
+						<li><a href="#">Report</a></li>
+						<li><a href="#">Print</a></li>
+					</ul>
+					<ul class="nav navbar navbar-right">
+						 <li><a href="javascript:logout();"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</nav>
+
+	</div>
+
+	</header>
+	<div class="container">
+		<h1>SEARCH RESULT</h1>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>No</th>
+					<th>Holy Name</th>
+					<th>Fullname</th>
+					<th>Gender</th>
+					<th>Date of birth</th>
+					<th>Father Name</th>
+					<th>Mother Name</th>
+					<th>Date of Baptism</th>
+					<th>Godparent</th>
+					<th>Priest</th>
+					<th>Eucharist</th>
+					<th>Confirmation</th>
+					<th>Bishop</th>
+					<th>Sponsor</th>
+					<th>Alive</th>
+				</tr>
+			</thead>
+			<tbody id="tbrow">
+
+			</tbody>
+		</table>
+	</div>
+
+</body>
+
+</html>

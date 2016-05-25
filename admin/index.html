@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/Tuhoc/css/navbar.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/Tuhoc/js/search.js"></script>
+	<script type="text/javascript" src="/Tuhoc/js/main.js"></script>
+	<script type="text/javascript" src="/Tuhoc/js/session.js"></script>
+	<script type="text/javascript" src="/Tuhoc/js/logout.js"></script>
+	<script>
+
+			if(checkSession() === false){
+				alert("Permission denied! \n Please Login");
+				window.location.href="/Tuhoc/login.html";
+			}
+
+	</script>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-inverse" >
+
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        				<span class="icon-bar"></span>
+       					<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+      				</button>
+      				<a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav" >
+						<li class="active"><a href="/Tuhoc/admin">Home</a></li>
+						<li><a href="/Tuhoc/admin">Search</a></li>
+						<li><a href="add.html">Add</a></li>
+						<li><a href="#">Report</a></li>
+						<li><a href="#">Print</a></li>
+					</ul>
+					<ul class="nav navbar navbar-right">
+						 <li><a href="javascript:logout();"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+					</ul>
+				</div>
+
+
+		</nav>
+
+	</div>
+
+	</header>
+
+	<div class="container">
+		<div class="row" >
+			<div class="col-xs-4"></div>
+			<div class="col-xs-4"><img class="logo" src="/Tuhoc/khuyen-mai.png"></div>
+			<div class="col-xs-4"></div>
+		</div>
+			<div class="row">
+
+
+			<div class="col-xs-8 col-xs-offset-2">
+		    <div class="input-group search" id="search-panel">
+                <div class="input-group-btn search-panel">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    	<span id="search_concept">Search By</span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#contains">By Name</a></li>
+                      <li><a href="#its_equal">By Year</a></li>
+                      <li><a href="#its_equal">All</a></li>
+                    </ul>
+                </div>
+                <input type="hidden" name="search_param" value="all" id="search_param">
+                <input type="text" id="search-text" class="form-control" name="x" placeholder="Search term...">
+                <span class="input-group-btn">
+                    <button id="search-btn" class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+            </div>
+
+		</div>
+		<div class="col-xs-2"></div>
+	</div>
+
+	</div>
+	<footer class="footer">
+		<p id = "test"></p>
+		<p class="p-footer text-muted"> Design by Quang Bach</p>
+	</footer>
+</body>
+</html>

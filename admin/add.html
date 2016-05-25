@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/Tuhoc/css/add.css">
+	<link rel="stylesheet" type="text/css" href="/Tuhoc/css/navbar.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/Tuhoc/js/add.js"></script>
+	<script type="text/javascript" src="/Tuhoc/js/session.js"></script>
+	<script type="text/javascript" src="/Tuhoc/js/logout.js"></script>
+	<script>
+
+			if(checkSession() === false){
+				alert("Permission denied! \n Please Login");
+				window.location.href="/Tuhoc/login.html";
+			}
+
+	</script>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-inverse">
+
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        				<span class="icon-bar"></span>
+       					<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+      				</button>
+      				<a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav" >
+						<li ><a href="#">Home</a></li>
+						<li><a href="index.html">Search</a></li>
+						<li class="active"><a href="add.html">Add</a></li>
+						<li><a href="#">Report</a></li>
+						<li><a href="#">Print</a></li>
+					</ul>
+					<ul class="nav navbar navbar-right">
+						 <li><a href="javascript:logout();"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+					</ul>
+				</div>
+
+		</nav>
+	</header>
+	<div class="container-fluid text-center">
+		<div class="col-xs-8 col-xs-offset-2 " style=" border: 1px solid #CBC9CF" id="form">
+			<form class="form-horizontal text-center" id="add-form" method="post" enctype="multipart/form-data" role="form">
+				<div class="panel-default">
+					<div class="panel-body">
+						<h3>Add</h3>
+					</div>
+				</div>
+				<div class="form-group">
+					<label  class="col-xs-2 control-label">Holyname: </label>
+                        <div class="col-xs-8">
+                            <input name="holyname" type="text" class="form-control" id="holyname">
+                        </div>
+				</div>
+				<div class="form-group">
+					<label class="col-xs-2 control-label">Fullname</label>
+                        <div class="col-xs-8">
+                            <input name="fullname" type="text" class="form-control" id="fullname">
+                        </div>
+				</div>
+				<div class="form-group">
+					<label class="col-xs-2 control-label">Gender</label>
+					<label class="col-xs-2"><input type="radio" name="sex" value="male"> Nam</label>
+                    <label class="col-xs-2 col-xs-offset-2"><input type="radio" name="sex" value ="female"> Nữ</label>
+				</div>
+				<div class="form-group">
+					<label class="col-xs-2 control-label">Date of birth</label>
+                        <div class="col-xs-8">
+                            <input name="birthday" type="date" class="form-control" id="birthday">
+                        </div>
+				</div>
+				<div class="form-group">
+					<label class="col-xs-2 control-label">Father name: </label>
+                        <div class="col-xs-8">
+                            <input name="fathername" type="text" class="form-control" >
+                        </div>
+				</div>
+				<div class="form-group">
+					<label class="col-xs-2 control-label">Mother name</label>
+                        <div class="col-xs-8">
+                            <input name="mothername" type="text" class="form-control" >
+                        </div>
+				</div>
+				<div class="form-group">
+					<label class="col-xs-2 control-label">Date of Baptism</label>
+                        <div class="col-xs-8">
+                            <input name="baptism" type="date" class="form-control" id="baptism" >
+                        </div>
+				</div>
+				<div class="form-group">
+					<label class="col-xs-2 control-label">Godparent</label>
+                        <div class="col-xs-8">
+                            <input name="godparent" type="text" class="form-control" id="godparent">
+                        </div>
+				</div>
+				<div class="form-group">
+					<label class="col-xs-2 control-label">Priest</label>
+                        <div class="col-xs-8">
+                            <input name="priest" type="text" class="form-control" id="priest">
+                        </div>
+				</div>
+				<div class="form-group">
+					<label class="col-xs-2 control-label">Eucharist</label>
+                        <div class="col-xs-8">
+                            <input name="eucharist" type="text" class="form-control" >
+                        </div>
+				</div>
+				<div class="form-group">
+					<label class="col-xs-2 control-label">Confimation</label>
+                        <div class="col-xs-8">
+                            <input name="confimation" type="date" class="form-control" id="confimation" >
+                        </div>
+				</div>
+				<div class="form-group" style="display: none;" id="bishop">
+					<label class="col-xs-2 control-label">Bishop</label>
+					<div class="col-xs-8">
+							<input name="bishop" type="date" class="form-control" >
+					</div>
+				</div>
+				<div class="form-group" style="display: none;" id="sponsor">
+					<label class="col-xs-2 control-label">Sponsor</label>
+					<div class="col-xs-8">
+							<input name="sponsor" type="date" class="form-control" >
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-xs-2 control-label">Alive</label>
+                        <div class="col-xs-8">
+                        	<div class="row">
+                        			<label class="col-xs-4"><input type="radio" name="alive" value="alive" checked id="alive"> Alive</label>
+                    				<label class="col-xs-4 "><input id="death" type="radio" name="alive" value ="death"> Death</label>
+                    				<div class="form-group col-xs-4" style="display: none;"  id="death-year" >
+
+                    						<label  >Year: <input type="text" name="year"  id = "year" class="form-control"> </label>
+
+
+
+                    				</div>
+                        	</div>
+
+
+                        </div>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-default col-xs-4 col-xs-offset-2">OK</button>
+
+				</div>
+
+			</form>
+		</div>
+
+	</div>
+
+</body>
+
+
+</html>
